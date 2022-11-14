@@ -26,17 +26,16 @@ module load Singularity/3.8.3
 
 7. Start Singularity shell and start Jupyter notebook
 ```shell
-singularity shell jupyter.sif
+singularity shell /users/project/precisiontox_008279/jupyter.sif
 jupyter notebook --no-browser --port=9000
 #Do not close this shell!
 ```
 
-8. Start 2-Hop SSH Tunnelling on another terminal
+8. Start 2-Hop SSH tunnelling on another terminal
 ```shell
 ssh -L 9000:localhost:9000 <username>@ant-login.linux.crg.es -t ssh -L 9000:localhost:9000 <username>@<node-id>
 ```
-
-10. Open an internet browser and go to `localhost:9000` to access jupyter Notebook
+9. Open an internet browser and go to `localhost:9000` to access jupyter Notebook
 If required, provide token for jupyter notebook displayed in Singularity shell 
 
 Always make sure to gracefully stop jupyter notebook with `ctrl+C` and exit the lab node when done.
