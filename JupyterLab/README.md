@@ -19,11 +19,11 @@ jupyter-lab --no-browser --port=9000
 #Do not close this terminal (terminal 1)!
 ```
 
-8. Start 2-Hop SSH tunnelling on another terminal (if connecting from home Wi-Fi this will require turning on VPN connection)
+4. Start 2-Hop SSH tunnelling on another terminal (if connecting from home Wi-Fi this will require turning on VPN connection)
 ```shell
 ssh -L 9000:localhost:9000 <username>@ant-login.linux.crg.es -t ssh -L 9000:localhost:9000 <username>@<node-id>
 ```
-9. Open an internet browser and go to `localhost:9000` to access JupyterLab.
+5. Open an internet browser and go to `localhost:9000` to access JupyterLab.
 If required, provide token displayed in terminal 1.
 
 Always make sure to gracefully stop JupyterLab with `ctrl+C` and exit the lab node when done.
