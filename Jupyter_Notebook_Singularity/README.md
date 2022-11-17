@@ -1,4 +1,4 @@
-# JupyterLab inside Singularity (via 2-hop SSH tunnel)
+# JupyterLab inside lab node (via 2-hop SSH tunnel)
 
 1. Create conda environment with JupyterLab installed 
 ```shell
